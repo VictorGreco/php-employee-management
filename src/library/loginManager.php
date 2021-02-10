@@ -14,6 +14,6 @@ foreach ($usersArray['users'] as $user) {
     if ($isValidUser && $isPasswordChecked) {
         echo "Success!";
         echo $user["userId"];
-        setcookie("userId", $user["userId"], time()+ 20, '/');
+        setcookie("userId", $user["userId"], time()+ 600, '/');
     }
 }
