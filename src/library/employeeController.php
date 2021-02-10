@@ -19,8 +19,10 @@
             $userAge = $user['age'];
             $userPostalCode = $user['postalCode'];
             $userPhoneNumber = $user['phoneNumber'];
+            $userImage = $user['image'];
 
             echo "
+                <img src='$userImage'>
                 <form action='' method='POST'>
                     <label for='name'>Name</label>
                     <input type='text' name='name' id='name' value='$userName'>
