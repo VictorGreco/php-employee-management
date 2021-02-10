@@ -10,14 +10,19 @@
 </head>
 <body>
     <?php 
-    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+    $pwd = dirname($_SERVER['SCRIPT_FILENAME']);
     
-    require($pwDirectory."/library/sessionHelper.php")?>
-    <?php 
-    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
-    echo file_get_contents($pwDirectory.'/../assets/html/header.html'); ?>
+    require("$pwd/library/sessionHelper.php");
+    ?>
 
     <?php 
+    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+
+    include ($pwDirectory.'/../assets/html/header.php'); ?>
+
+
+
+    <?php
     $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
     echo file_get_contents($pwDirectory.'/../assets/html/footer.html'); ?>
 </body>

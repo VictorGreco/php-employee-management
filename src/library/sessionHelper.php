@@ -1,10 +1,8 @@
 <?php
-    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
-    setcookie('hello', 'hihihi', time()+600);
-    //if ($_COOKIE)
-    var_dump($_COOKIE['hello']);
-    if (!$_COOKIE['hello']){
+    $pwd = dirname($_SERVER['SCRIPT_FILENAME']);
+    $userId = $_COOKIE["userId"];
 
-        header('Location: '.$pwDirectory.'/../../index.php');
+    if (!$userId) {
+        echo "redirect";
+        //header("Location: $pwd/../../index.php");
     }
-?>
