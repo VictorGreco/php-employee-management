@@ -1,11 +1,15 @@
 
 <?php
+$localHost = 'https://localhost/';
 $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']); //This variable was created to execute on your current custom server
 $usersJson = file_get_contents($pwDirectory.'/../../resources/users.json');  
 $usersArray = json_decode($usersJson, true);
 
 echo $_SERVER['DOCUMENT_ROOT'].`/`;
 echo dirname($_SERVER['SCRIPT_FILENAME']);
+echo '<br>';
+echo $pwDirectory.'/../../src/';
+echo '<br>';
 
 foreach ($usersArray['users'] as $user) {
     $isValidUser = $user['email'] === $_POST['email'];
@@ -14,6 +18,9 @@ foreach ($usersArray['users'] as $user) {
     if ($isValidUser && $isPasswordChecked) {
         echo "Success!";
         echo $user["userId"];
-        setcookie("userId", $user["userId"], time()+ 20, '/');
+        setcookie("userId", $user["userId"], time()+ 600, '/');
+        $url= '/dashboard.php';
+        header('Location: ' . $localHost . $url);
+
     }
 }
