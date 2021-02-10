@@ -9,10 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require("./library/sessionHelper.php")?>
-    <?php echo file_get_contents('./assets/html/header.html'); ?>
+    <?php 
+    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+    
+    require($pwDirectory."/library/sessionHelper.php")?>
+    <?php 
+    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+    echo file_get_contents($pwDirectory.'/../assets/html/header.html'); ?>
 
-    <?php echo file_get_contents('./assets/html/footer.html'); ?>
+    <?php 
+    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+    echo file_get_contents($pwDirectory.'/../assets/html/footer.html'); ?>
 </body>
 </html>
 
