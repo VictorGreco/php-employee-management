@@ -1,4 +1,3 @@
-
 <?php
     $userId = $_COOKIE["userId"];
 
@@ -12,3 +11,4 @@
         </nav>
         <a href='/index.php'>logout</a>
     </header>";
+?>

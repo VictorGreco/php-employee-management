@@ -6,24 +6,25 @@
  * @date: 11/06/2020
  */
 
-$pwd = dirname($_SERVER['SCRIPT_FILENAME']);
-$employeeJson = file_get_contents("$pwd/../../resources/employees.json");  
+$employeeJson = file_get_contents("../../resources/employees.json");
 $employeeArray = json_decode($employeeJson, true);
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    addEmployee($newEmployee);
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    file_put_contents('php://stderr', print_r($data, TRUE)); // print $_SERVER['argv'] in terminal
+
+    addEmployee($data);
 }
 
-function addEmployee(array $newEmployee)
-{
+function addEmployee(array $newEmployee) {
 // TODO implement it
 
-    // $employeeArray[8] = "TENNIS";
+    $newArray = array_merge($employeeArray, $newEmployee);
 
-    // $newJsonString = json_encode($employeeArray);
-    // echo $newJsonString;
-    // file_put_contents("$pwd/../../resources/employees.json", $newJsonString);
+    $newJsonString = json_encode($$newArray);
+    file_put_contents("../../resources/employees.json", $newJsonString);
 }
 
 

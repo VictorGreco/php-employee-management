@@ -5,23 +5,25 @@ const init = () => {
             width: "100%",
             height: "400px",
 
-            onItemInserting: function(args) {
+            onItemInserting: function (args) {
                 console.log(args);
 
-                axios.post('http://localhost:8000/src/library/employeeManager.php', {
-                    ...args.item
+                axios({
+                    method: 'POST',
+                    url: 'http://localhost:8000/src/library/employeeManager.php',
+                    data: args.item
                 });
-            },  // before controller.insertItem
-    
+            },
+
             inserting: true,
             editing: true,
             sorting: true,
             paging: true,
-    
+
             data,
-    
+
             fields: [
-                { name: "id", type: "text", width: 150, validate: "required", readOnly: false},
+                { name: "id", type: "text", width: 150, validate: "required", readOnly: false },
                 { name: "name", type: "text", width: 150, validate: "required" },
                 { name: "email", type: "text", width: 150, validate: "required" },
                 { name: "age", type: "number", width: 50, validate: "required" },

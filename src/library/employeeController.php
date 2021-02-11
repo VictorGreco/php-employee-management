@@ -1,13 +1,11 @@
 <?php
-    $usersJson = file_get_contents("$pwd/../resources/employees.json");  
-    $usersArray = json_decode($usersJson, true);
+    $employeeJson = file_get_contents("../resources/employees.json");
+    $employeeArray = json_decode($employeeJson, true);
 
-    foreach ($usersArray as $user) {
-        $isUserId = $user["id"] == $_GET["userId"];
+    foreach ($employeeArray as $user) {
+        $isValidID = $user["id"] == $_GET["userId"];
 
-        if ($isUserId) {
-            //setcookie("userId", $user["userId"], time() + 600, '/');
-            //header();
+        if ($isValidID) {
 
             $userName = $user['name'];
             $userLastName = $user['lastName'];
@@ -60,6 +58,13 @@
                 </form>
             ";
 
-            exit;
+            exit();
         }
-    }?>
+    }
+
+    echo "
+        <img src='../resources/unicorn.svg' height='200' width='200'>
+        <h1>ERROR 404: Employee not found</h1>
+
+        <button> <a href='/src/dashboard.php'>Return</a></button>";
+    ?>
