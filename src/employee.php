@@ -8,13 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        $pwd = dirname($_SERVER['SCRIPT_FILENAME']);
-        
-        require("$pwd/library/sessionHelper.php")?>
+    <?php     
+        require(__DIR__."/library/sessionHelper.php")?>
 
-    <?php 
-        require("$pwd/library/employeeController.php") 
+    <?php
+        require(__DIR__."/library/employeeController.php") 
     ?>
     
 </body>

@@ -7,24 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
+        type="text/javascript"></script></head>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <body>
-    <?php 
-    $pwd = dirname($_SERVER['SCRIPT_FILENAME']);
-    
-    require("$pwd/library/sessionHelper.php");
+    <?php
+    require(__DIR__. "/library/sessionHelper.php");
+    require(__DIR__. "/../assets/html/header.php");
     ?>
 
-    <?php 
-    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
+    <div id="jsGrid"></div>
 
-    include ($pwDirectory.'/../assets/html/header.php'); ?>
+    <?php echo file_get_contents(__DIR__.'/../assets/html/footer.html');?>
 
-
-
-    <?php
-    $pwDirectory = dirname($_SERVER['SCRIPT_FILENAME']);
-    echo file_get_contents($pwDirectory.'/../assets/html/footer.html'); ?>
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
 

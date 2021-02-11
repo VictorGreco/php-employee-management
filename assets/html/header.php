@@ -10,6 +10,5 @@
             <a href='/src/dashboard.php'>Dashboard</a>
             <a href='/src/employee.php?userId=$userId'>My Info</a>
         </nav>
-        <a href='/index.php>logout</a>
+        <a href='/index.php'>logout</a>
     </header>";
-?>
