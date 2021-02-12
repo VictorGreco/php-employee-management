@@ -10,10 +10,12 @@
 
             setcookie("userId", $user["userId"], time() + 84600, '/');
             header("Location: http://localhost:8000/src/dashboard.php", true, 302);
+
             exit();
         }
     }
     
     header("Location: http://localhost:8000/assets/html/unauthorized.html", true, 302);
+
     exit();
 ?>
