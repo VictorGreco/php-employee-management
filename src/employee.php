@@ -10,13 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
     <?php
-        require(__DIR__."/library/employeeController.php");
-    ?>
+    require(__DIR__."/library/employeeController.php"); ?>
 
     <?php
-        echo $currentEmployee;
         $userName = $currentEmployee['name'];
         $userLastName = $currentEmployee['lastName'];
         $userEmail = $currentEmployee['email'];
