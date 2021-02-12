@@ -9,15 +9,23 @@
 </head>
 <body>
     <main>
-        <h1>Login</h1>
-        <form action="./src/library/loginManager.php" method="POST">
+        <h1>Register</h1>
+
+
+
+
+        <form action="./src/library/loginControler.php" method="POST" >
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
             <input type="password" id="password" name="password" required>
-            <button type="submit">Sign In</button>
+            <input type="password" id="confirmPassword" name="password" required>
+            <input type="text" id="gender" name="gender" required>
+            <button type="submit">Register</button>
         </form>
-        <p> I'm not a member of the Citadel, tramit <a href="/register.php">Citizenship</a></p>
+        <p> I'm already a Citizen, <a href="/index.php">Request Access</a></p>
     </main>
 
     <?php echo file_get_contents('assets/html/footer.html'); ?>
+
+    <script src=""></script>
 </body>
 </html>

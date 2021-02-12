@@ -6,11 +6,25 @@ const init = () => {
             height: "400px",
 
             onItemInserting: function (args) {
-                console.log(args);
-
                 axios({
                     method: 'POST',
-                    url: 'http://localhost:8000/src/library/employeeManager.php',
+                    url: 'http://localhost:8000/src/library/employeeController.php',
+                    data: args.item
+                });
+            },
+
+            onItemDeleting: function (args) {
+                axios({
+                    method: 'DELETE',
+                    url: 'http://localhost:8000/src/library/employeeController.php',
+                    data: args.item.id
+                });
+            },
+
+            onItemUpdating: function (args) {
+                axios({
+                    method: 'PATCH',
+                    url: 'http://localhost:8000/src/library/employeeController.php',
                     data: args.item
                 });
             },
