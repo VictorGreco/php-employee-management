@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <h1>%LOGIN_TITLE%</h1>
+        <h1>Employee Manager</h1>
         <form action="./src/library/loginManager.php" method="POST">
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
             <input type="password" id="password" name="password" required>
@@ -17,6 +17,6 @@
         </form>
     </main>
 
-    <?php echo file_get_contents('./assets/html/footer.html'); ?>
+    <?php echo file_get_contents('assets/html/footer.html'); ?>
 </body>
 </html>
