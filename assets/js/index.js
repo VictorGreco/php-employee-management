@@ -1,5 +1,5 @@
 const init = () => {
-    axios.get('http://localhost:8000/resources/employees.json').then(({ data }) => {
+    axios.get('http://localhost/LeyberProject/php-employee-manager-1/resources/employees.json').then(({ data }) => {
 
         $("#jsGrid").jsGrid({
             width: "100%",
@@ -8,7 +8,7 @@ const init = () => {
             onItemInserting: function (args) {
                 axios({
                     method: 'POST',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
+                    url: 'http://localhost/LeyberProject/php-employee-manager-1/src/library/employeeController.php',
                     data: args.item
                 });
             },
@@ -16,7 +16,7 @@ const init = () => {
             onItemDeleting: function (args) {
                 axios({
                     method: 'DELETE',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
+                    url: 'http://localhost/LeyberProject/php-employee-manager-1/src/library/employeeController.php',
                     data: args.item.id
                 });
             },
@@ -24,7 +24,7 @@ const init = () => {
             onItemUpdating: function (args) {
                 axios({
                     method: 'PATCH',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
+                    url: 'http://localhost/LeyberProject/php-employee-manager-1/src/library/employeeController.php',
                     data: args.item
                 });
             },

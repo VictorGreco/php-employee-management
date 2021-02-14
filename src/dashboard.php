@@ -22,7 +22,7 @@
     ?>
     <div id="jsGrid"></div>
     <?php echo file_get_contents(__DIR__.'/../assets/html/footer.html');?>
-    <script src="/assets/js/index.js"></script>
+    <script src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/index.js"></script>
 </body>
 </html>
 
