@@ -1,0 +1,131 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+}
+
+a:active, a:focus, button {
+    outline: 0;
+    border: none;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    flex-direction: column;
+    font-size: 1em;
+    color:rgb(255, 251, 251);
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.signInBtn {
+    width: 20%;
+    font-size: 1em;
+    height: fit-content;
+}
+
+.signInBtn, .submitBtn, .returnBtn {
+    justify-content: center;
+    text-align: center;
+    border-radius:5em;
+    margin: 1em 1.5em 2em 1.5em;
+    border: 1em solid rgb(69, 90, 95,0.6);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    transition-timing-function: ease-in-out;
+    background-image: linear-gradient(rgba(62, 119, 114, 0.248), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
+    color:rgb(13, 15, 16);
+    /*I set the transition properties, the duration and the effects.*/
+    transition-property: box-shadow text-shadow;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+
+}
+
+.signInBtn:hover{
+    transform: scale(1);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0em 0.2em 0.3em 0.15em rgb(0, 225, 255);
+    /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
+    text-shadow: 0em 0em 0.1em rgb(0, 255, 229);
+    text-decoration: none;
+
+
+}
+
+.signInBtn:active{
+    border-top-width: 0.25em;
+    border-bottom-width: 0.8em;
+    border-left-width: 0.45em;
+    border-right-width: 0.45em;
+    background-image: linear-gradient(rgb(62, 119, 114), rgb(36, 35, 35), black);
+    transform: scale(1);
+    text-decoration: none;
+
+}
+
+form > button > a {
+    text-decoration: none;
+    color:rgb(1, 2, 2);
+
+}
+
+/* FOOTER CONTROLLER*/
+.controller {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 15vh;
+    position: relative;
+    justify-content: center;
+    margin-top: 3em;
+    align-content: space-evenly;
+    transform: rotateX(30deg);
+    border-radius: 4em;
+    border: 1em solid rgba(44, 78, 87, 0.5);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    background-image: linear-gradient(rgb(28, 55, 52, 0.5), rgb(12, 12, 12, 0.5), rgba(0, 0, 0, 0.275));
+}
+
+/*DISPLAY CONTROLLER*/
+.elementHidden {
+    display:none;
+}
+
+.returnBtn {
+    text-decoration: none;
+    color: black
+
+}
+
+#returnLink {
+    text-decoration: none;
+    color: black
+
+}
+
+.inputItem{
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    
+}

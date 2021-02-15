@@ -2,8 +2,8 @@ const init = () => {
     axios.get('http://localhost/LeyberProject/php-employee-manager-1/resources/employees.json').then(({ data }) => {
 
         $("#jsGrid").jsGrid({
-            width: "100%",
-            height: "400px",
+            width: "90%",
+            height: "60vh",
 
             onItemInserting: function (args) {
                 axios({
@@ -29,6 +29,15 @@ const init = () => {
                 });
             },
 
+
+
+            //CSS
+            css: "{'class': 'hello}", //is a string representing css classes to be attached to the table cell
+            headercss: "{'class': 'hello}",
+            filtercss: "",
+            insertcss: "",
+            editcss: "",
+
             inserting: true,
             editing: true,
             sorting: true,
@@ -37,15 +46,15 @@ const init = () => {
             data,
 
             fields: [
-                { name: "id", type: "text", width: 150, validate: "required", readOnly: false },
-                { name: "name", type: "text", width: 150, validate: "required" },
+                { name: "id", type: "text", width: 30, validate: "required", readOnly: false },
+                { name: "name", type: "text", width: 80, validate: "required" },
                 { name: "email", type: "text", width: 150, validate: "required" },
-                { name: "age", type: "number", width: 50, validate: "required" },
-                { name: "streetAddress", type: "text", width: 50, validate: "required" },
-                { name: "city", type: "text", width: 50, validate: "required" },
-                { name: "state", type: "text", width: 50, validate: "required" },
-                { name: "postalCode", type: "text", width: 50, validate: "required" },
-                { name: "phoneNumber", type: "text", width: 50, validate: "required" },
+                { name: "age", type: "number", width: 40, validate: "required" },
+                { name: "Street", type: "text", width: 80, validate: "required" },
+                { name: "city", type: "text", width: 80, validate: "required" },
+                { name: "state", type: "text", width: 40, validate: "required" },
+                { name: "postalCode", type: "text", width: 60, validate: "required" },
+                { name: "phoneNumber", type: "text", width: 110, validate: "required" },
                 { type: "control" }
             ]
         });
