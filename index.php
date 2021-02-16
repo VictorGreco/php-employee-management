@@ -8,10 +8,12 @@
     <title>Employee Manager</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/scrollBar.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
     <main>
-        <h1>Login</h1>
+        <h1>LOGIN</h1>
         <form action="./src/library/loginManager.php" method="POST">
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
             <input type="password" id="password" name="password" required>

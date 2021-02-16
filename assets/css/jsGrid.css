@@ -40,7 +40,11 @@ background: #afeef91e;
 .jsgrid-grid-header{
     background: #586666;
     color:#47cac8fa;
+    text-align: center;
+}
 
+.jsgrid-header-cell{
+    font-size: 14px;
 }
 
 .jsgrid {
@@ -64,6 +68,7 @@ background: #afeef91e;
     position: relative;
     background-size: cover;
     margin: 2em;
+    overflow: hidden;
 }
 
 .jsgrid-cell{
@@ -75,7 +80,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 16vh;
+    height: 18vh;
     position: relative;
     justify-content: center;
     align-content: space-evenly;
@@ -86,12 +91,71 @@ header{
     border-bottom: 0.3em solid #08fbff;
     background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);
     top: 0;
-    box-shadow:  0.7em 0.7em #00aaff, 0 0.7em 0.7em #00fdf9, 0 -0.4em 0.7em #00aaff, 0 -0.4em 0.7em #00fdf9;
+    box-shadow:  0.7em 0.7em #00ffe5, 0 0.7em 0.7em #09f8f4, 0 -0.4em 0.7em #00ffe5, 0 -0.4em 0.7em #00fdf9;
 }
 
 header > a{
     color: rgb(36, 36, 36);
     font-weight: bold;
+}
+
+header > h2 {
+    font-size: 30px;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -3px 0px rgba(0,0,0,.7);
+
+}
+
+.nav {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+nav > button > a {
+    text-decoration: none;
+}
+
+.dashboardBtn, .myInfoBtn, .logOutBtn {
+    justify-content: center;
+    text-align: center;
+    border-radius:5em;
+    margin: 1em 1.5em 2em 1.5em;
+    border: 1em solid rgba(60, 253, 218, 0.501);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    transition-timing-function: ease-in-out;
+    background-image: linear-gradient(rgba(62, 119, 114, 0.638), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
+    color:rgb(13, 15, 16);
+    /*I set the transition properties, the duration and the effects.*/
+    transition-property: box-shadow text-shadow;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+    width: 30%;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.dashboardBtn:hover, .myInfoBtn:hover, .logOutBtn:hover {
+    transform: scale(1.05);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0em 0.2em 0.3em 0.15em rgb(0, 225, 255);
+    /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
+    text-shadow: 0em 0em 0.1em rgb(0, 255, 229);
+    text-decoration: none;
+}
+
+.dashboardBtn:active, .myInfoBtn:active, .logOutBtn:active {
+    border-top-width: 0.25em;
+    border-bottom-width: 0.8em;
+    border-left-width: 0.45em;
+    border-right-width: 0.45em;
+    background-image: linear-gradient(rgb(66, 158, 151), rgb(74, 237, 201), rgb(122, 246, 255));
+    transform: scale(1);
+    text-decoration: none;
+
 }
 
 footer{
@@ -117,13 +181,18 @@ footer{
 }
 
 footer > div > a{
-    color: rgb(177, 177, 177);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     vertical-align: middle;
     text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
 }
 
-.creators > a {
+.creators, .sources {
     text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
 }
 

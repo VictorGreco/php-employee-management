@@ -46,14 +46,14 @@ const init = () => {
             data,
 
             fields: [
-                { name: "id", type: "text", width: 30, validate: "required", readOnly: false },
+                { name: "id", type: "text", width: 20, validate: "required", readOnly: false },
                 { name: "name", type: "text", width: 80, validate: "required" },
                 { name: "email", type: "text", width: 150, validate: "required" },
-                { name: "age", type: "number", width: 40, validate: "required" },
-                { name: "Street", type: "text", width: 80, validate: "required" },
+                { name: "age", type: "number", width: 35, validate: "required" },
+                { name: "streetAddress", type: "text", width: 100, validate: "required" },
                 { name: "city", type: "text", width: 80, validate: "required" },
                 { name: "state", type: "text", width: 40, validate: "required" },
-                { name: "postalCode", type: "text", width: 60, validate: "required" },
+                { name: "postalCode", type: "text", width: 80, validate: "required" },
                 { name: "phoneNumber", type: "text", width: 110, validate: "required" },
                 { type: "control" }
             ]

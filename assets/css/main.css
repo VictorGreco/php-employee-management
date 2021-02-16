@@ -8,6 +8,12 @@ a:active, a:focus, button {
     border: none;
   }
 
+body::before{
+    z-index: 1;
+    opacity: 0.2;
+    position: absolute;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -21,6 +27,20 @@ body {
     font-size: 1em;
     color:rgb(255, 251, 251);
     text-decoration: none;
+}
+
+div::after {
+    background-image: url('https://i.pinimg.com/564x/7c/db/51/7cdb51724c8505b689b8dc1f9db6f489.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+    content: "";
 }
 
 form {
@@ -43,23 +63,25 @@ form {
     text-align: center;
     border-radius:5em;
     margin: 1em 1.5em 2em 1.5em;
-    border: 1em solid rgb(69, 90, 95,0.6);
+    border: 1em solid rgba(60, 253, 218, 0.501);
     border-left-width: 0.5em;
     border-right-width: 0.5em;
     border-top-width: 0.1em;
     transition-timing-function: ease-in-out;
-    background-image: linear-gradient(rgba(62, 119, 114, 0.248), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
+    background-image: linear-gradient(rgba(62, 119, 114, 0.638), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
     color:rgb(13, 15, 16);
     /*I set the transition properties, the duration and the effects.*/
     transition-property: box-shadow text-shadow;
     transition-duration: 100ms;
     transition-timing-function: ease-out;
     text-decoration: none;
+    width: 30%;
+    font-weight: bold;
 
 }
 
-.signInBtn:hover{
-    transform: scale(1);
+.signInBtn:hover, .submitBtn:hover, .returnBtn:hover{
+    transform: scale(1.05);
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0em 0.2em 0.3em 0.15em rgb(0, 225, 255);
     /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
@@ -69,12 +91,12 @@ form {
 
 }
 
-.signInBtn:active{
+.signInBtn:active, .submitBtn:active, .returnBtn:active{
     border-top-width: 0.25em;
     border-bottom-width: 0.8em;
     border-left-width: 0.45em;
     border-right-width: 0.45em;
-    background-image: linear-gradient(rgb(62, 119, 114), rgb(36, 35, 35), black);
+    background-image: linear-gradient(rgb(66, 158, 151), rgb(74, 237, 201), rgb(122, 246, 255));
     transform: scale(1);
     text-decoration: none;
 
@@ -90,19 +112,20 @@ form > button > a {
 .controller {
     display: flex;
     flex-direction: row;
-    width: 60vw;
-    height: 15vh;
+    width: 100%;
+    height: 16vh;
     position: relative;
     justify-content: center;
-    margin-top: 3em;
     align-content: space-evenly;
-    transform: rotateX(30deg);
-    border-radius: 4em;
-    border: 1em solid rgba(44, 78, 87, 0.5);
-    border-left-width: 0.5em;
-    border-right-width: 0.5em;
-    border-top-width: 0.1em;
-    background-image: linear-gradient(rgb(28, 55, 52, 0.5), rgb(12, 12, 12, 0.5), rgba(0, 0, 0, 0.275));
+    align-items: center;
+    transform: rotateX(
+30deg
+);
+    border-bottom: 0.3em solid #08fbff;
+    background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);
+    top: 0;
+    box-shadow:  0 0.7em 0.7em #00ffe5, 0 0.7em 0.7em #09f8f4, 0 -0.4em 0.7em #00ffe5, 0 -0.4em 0.7em #00fdf9;
+    border-radius: 1em 1em / 1em 1em;
 }
 
 /*DISPLAY CONTROLLER*/
@@ -127,5 +150,61 @@ form > button > a {
     align-content: space-between;
     width: 100%;
     flex-direction: column;
-    
+    text-align: center;
+    align-items: center;
+
+}
+
+.inputItem > input {
+    width: 90%;
+    border-radius: 7em/3.5em;
+    background-color: rgba(5, 243, 243, 0.748);
+    border: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    min-height: 2.5em;
+
+}
+
+.inputItem > label {
+    font-weight: bold;
+    color: rgb(93, 255, 233);
+}
+
+.inputPair {
+    text-align: center;
+    display: flex;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.infoForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-evenly;
+    justify-content: space-between;
+    padding: 1em 1em;
+    border: 1em solid #43effa;
+    border-radius:  1em 1em 1em / 11em 13em 11em 11em;
+    background-color:#00ffe557;
+  
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0.5em 0em 0.3em 0.1em rgba(150, 194, 182, 0.796), -0.5em 0em 0.3em 0.1em rgba(113, 151, 140, 0.796);
+    min-width: 50em;
+    max-width: 95vw;
+    height: 76vh;
+    border-bottom : none;
+    border-top : none;
+    position: relative;
+    background-size: cover;
+    margin: 2em;
+    overflow: hidden;
+}
+
+button.logOutBtn > a {
+text-decoration: none;
 }
