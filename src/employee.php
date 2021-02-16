@@ -27,10 +27,9 @@
         $userAge = $currentEmployee['age'];
         $userPostalCode = $currentEmployee['postalCode'];
         $userPhoneNumber = $currentEmployee['phoneNumber'];
-        $userImage = $currentEmployee['image'];
+        //$userImage = $currentEmployee['image'];
 
         echo "
-            <img src='$userImage'>
             <form action='' method='POST' class = 'infoForm'>
                 <div class='inputPair'>
                     <div class='inputItem'>

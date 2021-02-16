@@ -5,24 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/register.css">
     <title>Employee Manager</title>
 </head>
 <body>
+        <!--HEADER. FUTURE TIME MEASUREMENT CLOCK-->
+    <header>
+        <button class='button' id='localStorageReset'>Local storage Reset</button>
+    </header>
     <main>
-        <h1>Register</h1>
+        <h1>Choose your answer wisely...</h1>
+        <section class = "terminalScreen" id="storyPage">
+            <!--HOME PAGE-->
 
-        <form action="./src/library/loginControler.php" method="POST">
-            <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
-            <input type="password" id="password" name="password" required>
-            <input type="password" id="confirmPassword" name="password" required>
-            <input type="text" id="gender" name="gender" required>
-            <button type="submit">Register</button>
-        </form>
+
+        <!--SCORE PAGE-->
+        <div class="container">
+            <div id="scenario"></div>
+            <div id="optionPath" class="buttonn-flex-box"></div>
+        </div>
+        </section>
+
+        <!--SCORE PAGE-->
+        <section class = "terminalScreen" id="scorePage"></section>
+
+        <!--CONTROLLER -->
+        <footer id="controler"> </footer>
+        <!-- <button id="finishAdventureButton">Finish Timeline</button>-->
+        <?php echo file_get_contents('assets/html/footer.html'); ?>
         <p> I'm already a Citizen, <a href="/index.php">Request Access</a></p>
+
     </main>
 
-    <?php echo file_get_contents('assets/html/footer.html'); ?>
 
-    <script src="/assets/js/index.js"></script>
+    <script type ="module" src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/main.js"></script>
+    <script type ="module" src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/storyModules/storyObjectArray.js"></script>
+    <script type ="module" src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/storage.js"></script>
+    <script type ="module" src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/buttons.js"></script>
+    <script type ="module" src="http://localhost/LeyberProject/php-employee-manager-1/assets/js/storyModules/storyObjectArray.js"></script>
 </body>
 </html>

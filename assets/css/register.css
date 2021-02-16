@@ -1,0 +1,158 @@
+@import './controllers.css';
+@import './initiateScreen.css';
+@import './storyTelling.css';
+@import './queries.css';
+@import './scrollBar.css';
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+button:focus { outline-style: none; }
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    flex-direction: column;
+    font-size: 1em;
+    color:rgb(255, 251, 251);
+    text-decoration: none;
+}
+
+main::after {
+    background-image: url('https://miro.medium.com/max/2560/1*BArwiczvwUqxWu9OB1e7Sw.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+    content: "";
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+
+#scenario {
+    margin-bottom: 1em;
+    margin-top:0.5em;
+    font-weight: bold;
+
+    position: relative;
+    flex-basis: 2em;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: space-between;
+    min-width: 90%;
+    max-width: 92%;
+    font-size: 1em;
+    height: 70vh;
+    min-height: 92%;
+    background-color: rgba(0, 247, 255, 0.09);
+    padding: 10px;
+    border-radius: 3em;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0em 0em 0.7em 0.3em rgba(75, 118, 119, 0.576);
+    flex-basis: 60%;
+    position: relative;
+    border: 0.2em solid rgba(131, 228, 255, 0.467);
+    color:rgb(255, 251, 251);
+}
+#optionPath{
+    max-height: 70%;
+    overflow-y: scroll;
+}
+/* SCORE PAGE STYLES */
+#visualizer {
+position: relative;
+flex-basis: 30%;
+max-height: 10em;
+margin-bottom: 0.8em;
+border-radius: 10em;
+background-position: center;
+background-size: cover;
+max-width: 80%
+}
+#timelineList {
+margin-top: 1em;
+background-color: rgba(0, 247, 255, 0.253);
+height: 40vh
+}
+#storyPage {
+    background-size: cover;
+    padding: 0;
+    margin-left: 1.5em;
+    height: 50vh;
+
+}
+/*TO MAKE BREAKS*/
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+#myVideo {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    }
+#myVideoHidden {
+    display: none;
+}
+
+.footer{
+
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 10vh;
+    position: relative;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-content: space-evenly;
+    align-items: center;
+    transform: rotateX(30deg);
+    border-radius: 4em;
+    border: 1em solid rgba(44, 78, 87, 0.5);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);    transform: rotateY(10deg);
+    box-shadow:  0.7em 0.7em #00aaff, 0 0.7em 0.7em #00fdf9, 0 -0.4em 0.7em #00aaff, 0 -0.4em 0.7em #00fdf9;
+}
+
+footer > div > a{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
+}
+
+.creators, .sources {
+    text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+
