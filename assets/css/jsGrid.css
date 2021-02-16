@@ -1,0 +1,199 @@
+td, th {
+    color: black;
+    column-fill: balance;
+    min-width: fit-content;
+    background-color: aqua;
+}
+
+td.jsgrid-cell {
+    width: fit-content;
+    background-color: rgba(201, 252, 252, 0.234);
+}
+
+.jsgrid-grid-body {
+    overflow-x: scroll;
+
+}
+
+div.jsgrid-grid-header > th {
+font-size: 0.6em;
+background: #afeef91e;
+}
+
+.jsgrid-row>.jsgrid-cell {
+    background: #afeef91e;
+    color: #00fdf9fa;
+
+}
+
+.jsgrid-alt-row>.jsgrid-cell{
+    background: #45d8f16b;
+    color: #00fdf9fa;
+
+}
+
+.jsgrid-header-row>.jsgrid-header-cell{
+    background: #91fffd65;
+    color: #00fdf9fa;
+
+}
+.jsgrid-grid-header{
+    background: #586666;
+    color:#47cac8fa;
+    text-align: center;
+}
+
+.jsgrid-header-cell{
+    font-size: 14px;
+}
+
+.jsgrid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-evenly;
+    justify-content: space-between;
+    padding: 1em 1em;
+    border: 1em solid #43effa;
+    border-radius:  1em 1em 1em / 11em 13em 11em 11em;
+    background-color:#7fa7a463;
+    
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0.5em 0em 0.3em 0.1em rgba(113, 151, 140, 0.796), -0.5em 0em 0.3em 0.1em rgba(113, 151, 140, 0.796);
+    min-width: 50em;
+    max-width: 95vw;
+    height: 76vh;
+    border-bottom : none;
+    border-top : none;
+    position: relative;
+    background-size: cover;
+    margin: 2em;
+    overflow: hidden;
+}
+
+.jsgrid-cell{
+    border: none;
+   
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 18vh;
+    position: relative;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+    transform: rotateX(
+30deg
+);
+    border-bottom: 0.3em solid #08fbff;
+    background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);
+    top: 0;
+    box-shadow:  0.7em 0.7em #00ffe5, 0 0.7em 0.7em #09f8f4, 0 -0.4em 0.7em #00ffe5, 0 -0.4em 0.7em #00fdf9;
+}
+
+header > a{
+    color: rgb(36, 36, 36);
+    font-weight: bold;
+}
+
+header > h2 {
+    font-size: 30px;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -3px 0px rgba(0,0,0,.7);
+
+}
+
+.nav {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+nav > button > a {
+    text-decoration: none;
+}
+
+.dashboardBtn, .myInfoBtn, .logOutBtn {
+    justify-content: center;
+    text-align: center;
+    border-radius:5em;
+    margin: 1em 1.5em 2em 1.5em;
+    border: 1em solid rgba(60, 253, 218, 0.501);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    transition-timing-function: ease-in-out;
+    background-image: linear-gradient(rgba(62, 119, 114, 0.638), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
+    color:rgb(13, 15, 16);
+    /*I set the transition properties, the duration and the effects.*/
+    transition-property: box-shadow text-shadow;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+    width: 30%;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.dashboardBtn:hover, .myInfoBtn:hover, .logOutBtn:hover {
+    transform: scale(1.05);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0em 0.2em 0.3em 0.15em rgb(0, 225, 255);
+    /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
+    text-shadow: 0em 0em 0.1em rgb(0, 255, 229);
+    text-decoration: none;
+}
+
+.dashboardBtn:active, .myInfoBtn:active, .logOutBtn:active {
+    border-top-width: 0.25em;
+    border-bottom-width: 0.8em;
+    border-left-width: 0.45em;
+    border-right-width: 0.45em;
+    background-image: linear-gradient(rgb(66, 158, 151), rgb(74, 237, 201), rgb(122, 246, 255));
+    transform: scale(1);
+    text-decoration: none;
+
+}
+
+footer{
+
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+    position: relative;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    align-content: space-evenly;
+    align-items: center;
+    transform: rotateX(30deg);
+    border-radius: 4em;
+    border: 1em solid rgba(44, 78, 87, 0.5);
+    border-left-width: 0.5em;
+    border-right-width: 0.5em;
+    border-top-width: 0.1em;
+    background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);    transform: rotateY(10deg);
+    box-shadow:  0.7em 0.7em #00aaff, 0 0.7em 0.7em #00fdf9, 0 -0.4em 0.7em #00aaff, 0 -0.4em 0.7em #00fdf9;
+}
+
+footer > div > a{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
+}
+
+.creators, .sources {
+    text-decoration:  none;
+    text-shadow: 0px 3px 0px rgba(82, 204, 202, 0.816), 0px -0.5px 0px rgba(43, 253, 250, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+}
+

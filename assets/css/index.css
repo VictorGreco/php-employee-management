@@ -1,0 +1,38 @@
+.creators, .sources {
+    text-decoration:  none;
+    text-shadow: 0px 1px 0px rgba(82, 204, 202, 0.816), 0px -0.3px 0px rgba(43, 253, 250, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+div > a {
+    text-decoration: none;
+    color: rgb(56, 221, 250);
+}
+
+main{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > p {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main > p > a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+main > form {
+    text-align: center;
+    align-items: center;
+
+}

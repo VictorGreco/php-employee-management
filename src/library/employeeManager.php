@@ -8,12 +8,22 @@
 
 // file_put_contents('php://stderr', print_r($_SERVER, TRUE)); // Terminal log in php
 
-function addEmployee(array $newEmployee, array $employeeArray, string $employeeJsonPath) {
-    array_push($employeeArray, $newEmployee);
+function addEmployee(array $data, array $employeeArray, string $employeeJsonPath) {
+    $id = $data["id"];
+    $isDuplicatedEmployee = FALSE;
 
-    $jsonData = json_encode($employeeArray);
+    foreach($employeeArray as $employee) {
+        if ($employee["id"] == $id) {
+            
+            $isDuplicatedEmployee = TRUE;
+            break;
+        }
+    }
 
-    file_put_contents($employeeJsonPath, $jsonData);
+    if (!$isDuplicatedEmployee) {
+        array_push($employeeArray, $newEmployee);
+        file_put_contents($employeeJsonPath, json_encode($employeeArray));
+    }
 }
 
 function deleteEmployee(string $id, array $employeeArray, string $employeeJsonPath) {
@@ -31,14 +41,13 @@ function deleteEmployee(string $id, array $employeeArray, string $employeeJsonPa
     }
 }
 
-function updateEmployee(array $updateEmployee, array $employeeArray, string $employeeJsonPath) {
-    $id = $updateEmployee["id"];
+function updateEmployee(array $data, array $employeeArray, string $employeeJsonPath) {
+    $id = $data["id"];
 
     foreach($employeeArray as $employee) {
-
         if ($employee["id"] == $id) {
             $search = array_search($employee, $employeeArray);
-            $employeeArray[$search] = $updateEmployee;
+            $employeeArray[$search] = $data;
             $jsonData = json_encode($employeeArray);
 
             file_put_contents($employeeJsonPath, $jsonData);

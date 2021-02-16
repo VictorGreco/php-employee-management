@@ -26,6 +26,6 @@
 
     <?php echo file_get_contents('assets/html/footer.html'); ?>
 
-    <script src=""></script>
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
