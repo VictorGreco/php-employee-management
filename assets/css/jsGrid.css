@@ -72,7 +72,8 @@ background: #afeef91e;
 }
 
 .jsgrid-cell{
-    border: 0.01em solid #adc3f2;
+    border: none;
+   
 }
 
 

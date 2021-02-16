@@ -15,8 +15,12 @@
     <main>
         <h1>LOGIN</h1>
         <form action="./src/library/loginManager.php" method="POST">
+            <div class='inputItem'>
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
+            </div>
+            <div class='inputItem'>
             <input type="password" id="password" name="password" required>
+            </div>
             <button type="submit" class = 'signInBtn'>Sign In</button>
         </form>
         <p> I'm not a member of the Citadel, tramit <a href="/register.php">Citizenship</a></p>

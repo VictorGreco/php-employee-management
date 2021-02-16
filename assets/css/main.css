@@ -8,11 +8,6 @@ a:active, a:focus, button {
     border: none;
   }
 
-body::before{
-    z-index: 1;
-    opacity: 0.2;
-    position: absolute;
-}
 
 body {
     padding: 0;
@@ -33,7 +28,7 @@ div::after {
     background-image: url('https://i.pinimg.com/564x/7c/db/51/7cdb51724c8505b689b8dc1f9db6f489.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.15;
+    opacity: 0.1;
     top: 0;
     left: 0;
     bottom: 0;
@@ -77,6 +72,7 @@ form {
     text-decoration: none;
     width: 30%;
     font-weight: bold;
+    font-size: 18px;
 
 }
 
@@ -164,12 +160,16 @@ form > button > a {
     color: rgb(255, 255, 255);
     font-weight: bold;
     min-height: 2.5em;
+    font-size: 18px;
+   
 
 }
 
 .inputItem > label {
     font-weight: bold;
     color: rgb(93, 255, 233);
+    font-size: 24px;
+    text-shadow: 0em 0em 0.2em rgb(0, 255, 229) ;
 }
 
 .inputPair {
