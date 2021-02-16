@@ -44,6 +44,8 @@ function deleteEmployee(string $id, array $employeeArray, string $employeeJsonPa
 function updateEmployee(array $data, array $employeeArray, string $employeeJsonPath) {
     $id = $data["id"];
 
+    //file_put_contents('php://stderr', print_r($data, TRUE)); // Terminal log in php
+
     foreach($employeeArray as $employee) {
         if ($employee["id"] == $id) {
             $search = array_search($employee, $employeeArray);

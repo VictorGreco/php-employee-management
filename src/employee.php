@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body> 
     <?php
@@ -37,8 +38,8 @@
                     <input type='text' name='name' id='name' value='$userName'>
                     </div>
                     <div class='inputItem'>
-                    <label for='lastname'>Last Name</label>
-                    <input type='text' name='lastname' id='lastname' value='$userLastName'>
+                    <label for='lastName'>Last Name</label>
+                    <input type='text' name='lastName' id='lastName' value='$userLastName'>
                     </div>
                 </div>
 
@@ -93,14 +94,16 @@
             </form>
         ";
 
+        echo "<script src='./employeeFormSubmmitter.js'></script>";
+
         exit();
-            
-    
+
         echo "
             <img src='../resources/unicorn.svg' height='200' width='200'>
             <h1>ERROR 404: Employee not found</h1>
     
             <button> <a href='http://localhost:8000/src/dashboard.php'>Return</a></button>";
     ?>
+
 </body>
 </html>

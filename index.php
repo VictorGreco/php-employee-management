@@ -1,3 +1,12 @@
+<?php 
+    if ($_GET["logout"]) {
+        if (isset($_COOKIE['userId'])) {
+            unset($_COOKIE['userId']); 
+            setcookie('userId', null, -1, '/'); 
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

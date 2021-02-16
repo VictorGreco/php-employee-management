@@ -11,10 +11,7 @@
     <main>
         <h1>Register</h1>
 
-
-
-
-        <form action="./src/library/loginControler.php" method="POST" >
+        <form action="./src/library/loginControler.php" method="POST">
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
             <input type="password" id="password" name="password" required>
             <input type="password" id="confirmPassword" name="password" required>
