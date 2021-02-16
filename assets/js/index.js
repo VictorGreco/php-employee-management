@@ -4,23 +4,23 @@ const init = () => {
     axios.get(`${basePath}/resources/employees.json`).then(({ data }) => {
 
         $("#jsGrid").jsGrid({
-            width: "100%",
-            height: "400px",
+            width: "90%",
+            height: "60vh",
             inserting: true,
             editing: true,
             sorting: true,
             paging: true,
             data,
             fields: [
-                { name: "id", type: "text", width: 150, validate: "required", readOnly: false },
-                { name: "name", type: "text", width: 150, validate: "required" },
+                { name: "id", type: "text", width: 20, validate: "required", readOnly: false },
+                { name: "name", type: "text", width: 80, validate: "required" },
                 { name: "email", type: "text", width: 150, validate: "required" },
-                { name: "age", type: "number", width: 50, validate: "required" },
-                { name: "streetAddress", type: "text", width: 50, validate: "required" },
-                { name: "city", type: "text", width: 50, validate: "required" },
-                { name: "state", type: "text", width: 50, validate: "required" },
-                { name: "postalCode", type: "text", width: 50, validate: "required" },
-                { name: "phoneNumber", type: "text", width: 50, validate: "required" },
+                { name: "age", type: "number", width: 35, validate: "required" },
+                { name: "streetAddress", type: "text", width: 100, validate: "required" },
+                { name: "city", type: "text", width: 80, validate: "required" },
+                { name: "state", type: "text", width: 40, validate: "required" },
+                { name: "postalCode", type: "text", width: 80, validate: "required" },
+                { name: "phoneNumber", type: "text", width: 110, validate: "required" },
                 { type: "control" }
             ],
 

@@ -1,0 +1,26 @@
+#email, #email:active, #email:default, #email > input {
+margin-top: 1em;
+width: 90%;
+border-radius: 7em/3.5em;
+background-color: rgba(5, 243, 243, 0.748);
+border: none;
+text-align: center;
+color: rgb(255, 255, 255);
+font-weight: bold;
+min-height: 2.5em;
+font-size: 18px;
+}
+
+#password, #password:active, #password:default{
+
+margin-top: 1em;
+width: 90%;
+border-radius: 7em/3.5em;
+background-color: rgba(5, 243, 243, 0.748);
+border: none;
+text-align: center;
+color: rgb(255, 255, 255);
+font-weight: bold;
+min-height: 2.5em;
+font-size: 18px;
+}
