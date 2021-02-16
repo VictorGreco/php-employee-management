@@ -1,41 +1,16 @@
+const basePath = 'http://localhost:8000';
+
 const init = () => {
-    axios.get('http://localhost:8000/resources/employees.json').then(({ data }) => {
+    axios.get(`${basePath}/resources/employees.json`).then(({ data }) => {
 
         $("#jsGrid").jsGrid({
             width: "100%",
             height: "400px",
-
-            onItemInserting: function (args) {
-                axios({
-                    method: 'POST',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
-                    data: args.item
-                });
-            },
-
-            onItemDeleting: function (args) {
-                axios({
-                    method: 'DELETE',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
-                    data: args.item.id
-                });
-            },
-
-            onItemUpdating: function (args) {
-                axios({
-                    method: 'PATCH',
-                    url: 'http://localhost:8000/src/library/employeeController.php',
-                    data: args.item
-                });
-            },
-
             inserting: true,
             editing: true,
             sorting: true,
             paging: true,
-
             data,
-
             fields: [
                 { name: "id", type: "text", width: 150, validate: "required", readOnly: false },
                 { name: "name", type: "text", width: 150, validate: "required" },
@@ -47,7 +22,46 @@ const init = () => {
                 { name: "postalCode", type: "text", width: 50, validate: "required" },
                 { name: "phoneNumber", type: "text", width: 50, validate: "required" },
                 { type: "control" }
-            ]
+            ],
+
+            onItemInserting: function ({ item, grid }) {
+                const { data } = grid;
+                const { id } = item;
+                let isDuplicatedId = false;
+
+                data.forEach(row => {
+                    if (row?.id == id) { isDuplicatedId = true }
+                });
+
+                if (!isDuplicatedId) {
+                    axios({
+                        method: 'POST',
+                        url: `${basePath}/src/library/employeeController.php`,
+                        data: item
+                    });
+                }
+            },
+
+            onItemDeleting: function ({ item }) {
+                const { id } = item;
+
+                axios({
+                    method: 'DELETE',
+                    url: `${basePath}/src/library/employeeController.php`,
+                    data: id
+                });
+            },
+
+            onItemUpdating: function ({ item }) {
+                axios({
+                    method: 'PATCH',
+                    url: `${basePath}/src/library/employeeController.php`,
+                    data: item
+                });
+            },
+
+            rowClick: function (args) { },
+            rowDoubleClick: function ({ item }) { window.location.href = `${basePath}/src/employee.php?userId=${item.id}` }
         });
     });
 };
