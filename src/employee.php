@@ -89,7 +89,7 @@
 
                 <div class = 'controller'>
                 <button type='submit' class = 'submitBtn'>SUBMIT</button>
-                <button class = 'returnBtn'> <a href='http://localhost:8000/src/dashboard.php' id = 'returnLink'>RETURN</a></button>
+                <button class = 'returnBtn'> <a href='http://localhost/LeyberProject/php-employee-manager-1/src/dashboard.php' id = 'returnLink'>RETURN</a></button>
                 </div>
             </form>
         ";
@@ -102,7 +102,7 @@
             <img src='../resources/unicorn.svg' height='200' width='200'>
             <h1>ERROR 404: Employee not found</h1>
     
-            <button> <a href='http://localhost:8000/src/dashboard.php'>Return</a></button>";
+            <button> <a href='http://localhost/LeyberProject/php-employee-manager-1/src/dashboard.php'>Return</a></button>";
     ?>
 
 </body>

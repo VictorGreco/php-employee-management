@@ -1,4 +1,4 @@
-const basePath = 'http://localhost:8000';
+const basePath = 'http://localhost/LeyberProject/php-employee-manager-1';
 
 const init = () => {
     axios.get(`${basePath}/resources/employees.json`).then(({ data }) => {

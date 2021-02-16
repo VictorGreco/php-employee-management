@@ -22,7 +22,7 @@
 <body>
     <main>
         <h1>LOGIN</h1>
-        <form action="./src/library/loginManager.php" method="POST">
+        <form action="http://localhost/LeyberProject/php-employee-manager-1/src/library/loginManager.php" method="POST">
             <div class='inputItem'>
             <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100" required>
             </div>
@@ -31,9 +31,9 @@
             </div>
             <button type="submit" class = 'signInBtn'>Sign In</button>
         </form>
-        <p> I'm not a member of the Citadel, tramit <a href="/register.php">Citizenship</a></p>
+        <p> I'm not a member of the Citadel, tramit <a href="http://localhost/LeyberProject/php-employee-manager-1/register.php">Citizenship</a></p>
     </main>
 
-    <?php echo file_get_contents('assets/html/footer.html'); ?>
+    <?php echo file_get_contents('http://localhost/LeyberProject/php-employee-manager-1/assets/html/footer.html'); ?>
 </body>
 </html>
