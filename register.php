@@ -33,7 +33,7 @@
         <footer id="controler"> </footer>
         <!-- <button id="finishAdventureButton">Finish Timeline</button>-->
         <?php echo file_get_contents('assets/html/footer.html'); ?>
-        <p> I'm already a Citizen, <a href="/index.php">Request Access</a></p>
+        <button class= 'logOutBtn controllerButton'><a href='http://localhost/LeyberProject/php-employee-manager-1/index.php?logout=true'>REQUEST ACCESS</a></button>
 
     </main>
 

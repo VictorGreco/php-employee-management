@@ -41,6 +41,11 @@
 
 }
 
+.controllerButton > a {
+    text-decoration: none;
+    color: rgb(0, 247, 255);
+}
+
 /*DISPLAY CONTROLLER*/
 .elementHidden {
     display:none;
